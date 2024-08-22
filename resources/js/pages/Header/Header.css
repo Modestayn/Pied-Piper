@@ -1,0 +1,144 @@
+/* main Header styles */
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+/* Header styles */
+.header {
+    position: relative;
+    background: linear-gradient(90deg, #360033 0%, #0B8793 100%);
+    padding: 10px 0;
+    height: 500px;
+    overflow: hidden;
+}
+
+.waves {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    backdrop-filter: blur(2px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+    border: 2px solid rgba(225, 225, 225, 0.18);
+    border-radius: 30px;
+    padding: 15px;
+    z-index: 1;
+}
+
+.nav__menu {
+    display: flex;
+    gap: 25px;
+}
+
+.item__link {
+    color: #fff;
+    font-size: 22px;
+}
+
+.nav__info {
+    display: flex;
+    gap: 35px;
+}
+
+.menu__item {
+    position: relative;
+}
+
+.menu__item::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -5px;
+    left: 5%;
+    transform: translateX(-5%);
+    background-color: rgb(255, 255, 255);
+    visibility: hidden;
+    transition: all 0.3s ease-in-out 0s;
+    -webkit-transform: translateX(-5%);
+    -moz-transform: translateX(-5%);
+    -ms-transform: translateX(-5%);
+    -o-transform: translateX(-5%);
+}
+
+.menu__item:hover::before {
+    visibility: visible;
+    width: 100%;
+}
+
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+.header__info {
+    text-align: center;
+    color: #fff;
+    margin-top: 120px;
+}
+
+.info__title {
+    text-transform: uppercase;
+    font-size: 55px;
+}
+
+.info__subTitle {
+    font-size: 22px;
+}
+
+.logo__img {
+    width: 45px;
+    object-fit: cover;
+    background-color: transparent;
+}
+
+/* InfoShop.css */
+.info__shop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.shop_link, .shop__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    text-decoration: none;
+    font-size: 22px;
+    padding-left: 5px;
+}
+
+/* in development */
+/* .shop_link:hover, .shop__link:hover {
+    transform: translateY(-8px) rotateY(15deg) rotateX(15deg);
+
+} */
+.shop__score {
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 6px 12px #360033;
+    transform: perspective(800px) rotateX(25deg) rotateY(25deg);
+}
